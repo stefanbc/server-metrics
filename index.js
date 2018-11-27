@@ -31,6 +31,42 @@ export class ServerStats {
 
     get() {
 
+        if(this.model === 'basic') {
+            return basicModel();
+        } else if (this.model === 'advanced') {
+            return advancedModel();
+        }
+
+    }
+
+    basicModel() {
+
+        return {
+            uptime: this.getUptime(),
+            currentDate: this.getCurrentDate(),
+            activeDate: this.getActiveDate(),
+            time: this.getTime(),
+            location: data.location
+        };
+
+    }
+
+    advancedModel() {
+
+        let object = {
+            os: this.getOS(),
+            processor: this.parseCPUModel(),
+            architecture: os.arch(),
+            totalMem: this.parseTotalMem(),
+            hostname: os.hostname(),
+            localIp: data.localIp,
+            publicIp: data.publicIp,
+            networkMask: netmask.netmask,
+            mac: netmask.mac
+        };
+
+        return Object.assign(object, this.basicModel());
+
     }
 
 }
