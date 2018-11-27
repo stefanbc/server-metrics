@@ -1,0 +1,21 @@
+{
+  "name": "server-stats",
+  "version": "0.0.1",
+  "description": "An npm module that gathers server data and outputs in in a friendly way",
+  "main": "index.js",
+  "repository": "git@github.com:stefanbc/server-stats.git",
+  "author": "stefanbc <stefcosma@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "getos": "^3.1.1",
+    "humem": "^0.1.1",
+    "internal-ip": "^3.0.1",
+    "iplocation": "^6.0.4",
+    "ipmask": "^1.0.0",
+    "macos-release": "^2.0.0",
+    "os-name": "^3.0.0",
+    "os-uptime": "^2.0.2",
+    "public-ip": "^2.4.0",
+    "win-release": "^3.0.0"
+  }
+}
