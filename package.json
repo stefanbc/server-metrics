@@ -1,10 +1,24 @@
 {
   "name": "server-stats",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "An npm module that gathers server data and outputs in in a friendly way",
   "main": "index.js",
-  "repository": "git@github.com:stefanbc/server-stats.git",
-  "author": "stefanbc <stefcosma@gmail.com>",
+  "scripts": {
+    "test": "mocha --require babel-core/register"
+  },
+  "author": {
+    "name": "Stefan Cosma",
+    "email": "hello@stefancosma.xyz",
+    "url": "https://github.com/stefanbc"
+  },
+  "bugs": {
+    "url": "https://github.com/stefanbc/server-stats/issues"
+  },
+  "homepage": "https://stefancosma.xyz",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stefanbc/server-stats.git"
+  },
   "license": "MIT",
   "dependencies": {
     "dayjs": "^1.7.7",
@@ -18,5 +32,26 @@
     "os-uptime": "^2.0.2",
     "public-ip": "^2.4.0",
     "win-release": "^3.0.0"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  },
+  "engines": {
+    "node": ">=8.12.0"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "node": true
+    }
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "mocha": "^5.2.0"
   }
 }

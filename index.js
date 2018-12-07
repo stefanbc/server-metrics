@@ -56,7 +56,7 @@ export class ServerStats {
             currentDate: this.getCurrentDate(),
             activeDate: this.getActiveDate(),
             time: this.getTime(),
-            location: data.location
+            location: this.location
         };
 
     }
@@ -74,10 +74,10 @@ export class ServerStats {
             architecture: os.arch(),
             totalMem: this.parseTotalMem(),
             hostname: os.hostname(),
-            localIp: data.localIp,
-            publicIp: data.publicIp,
             networkMask: netmask.netmask,
-            mac: netmask.mac
+            mac: netmask.mac,
+            localIp: this.localIp,
+            publicIp: this.publicIp,
         };
 
         return Object.assign(object, this.basicModel());
