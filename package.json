@@ -7,6 +7,7 @@
   "author": "stefanbc <stefcosma@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "dayjs": "^1.7.7",
     "getos": "^3.1.1",
     "humem": "^0.1.1",
     "internal-ip": "^3.0.1",
